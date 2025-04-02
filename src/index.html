@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startsida</title>
+    <link rel="stylesheet" href="css/main.scss">
+</head>
+<body>
+    <header class="header">
+        <h1 class="mainheader">Startsida</h1>
+        <div class="navmenu">
+        <nav class="menu" id="menu">
+            <ul class="headmenu">
+                <li><a class="duarhar" href="index.html">HEM</a></li>
+                <li><a href="sass.html">SASS</a></li>
+                <li><a href="animering.html">ANIMERING</a></li>
+                <li><a href="#">#</a></li>
+                <li><a href="#">#</a></li>
+            </ul>
+        </nav>
+        </div>
+        <button class="menu-btn open" id="open-menu"> 
+            <span class="menu-icon"> 
+            <span class="bars"></span> 
+            <span class="bars"></span> 
+            <span class="bars"></span> 
+            </span> 
+            <span class="menutext">Meny</span> 
+            </button> 
+            <nav class="menu" id="nav-menu"> 
+            <button class="menu-btn close" id="close-menu"> 
+            <span class="menu-icon"> 
+            <span class="bars cross1"></span> 
+            <span class="bars cross2"></span> 
+            </span> 
+            <span class="menutext">Stäng meny</span> 
+            </button> 
+            <ul class="mobilmenu">
+                <li><a class="duarhar" href="index.html">HEM</a></li>
+                <li><a href="sass.html">SASS</a></li>
+                <li><a href="animering.html">ANIMERING</a></li>
+                <li><a href="#">#</a></li>
+                <li><a href="#">#</a></li>
+            </ul>
+            </nav>
+    </header>
+    <main class="main">
+        <div class="intetext_index">
+        <h2>Äntligen är ljuset tillbaka!</h2>
+        <p>Jag älskar att våren snart är här, eftersom den kommer med ljusare dagar och värme.</p>
+        <p>Det bästa jag vet med våren är påsken. Då brukar jag åka med min familj till stugan där åker vi skoter, pimplar och lagar mat utomhus över öppen eld. 
+            I år har jag även unnat mig en ny skoteroverall så det ska bli kul att få ge sig ut och inviga den.
+        </p>
+        <picture>
+            <source srcset="images/overall.avif" type="image/avif">
+            <source srcset="images/overall.webp" type="image/webp">
+            <img class="overallimg" src="images/overall.jpeg" alt="skoteroverall.">
+        </picture>
+        <p>Eftersom påsken var så tidig förra året var den kallare än vanligt och vi hade inte jättetur med vädret men det blev en trevlig helg ändå.
+            Ser mycket fram emot vad påsken 2025 har att erbjuda.
+        </p>
+        <picture>
+            <source srcset="images/skoter.avif" type="image/avif">
+            <source srcset="images/skoter.webp" type="image/webp">
+            <img class="skoterimg" src="images/skoter.jpeg" alt="Två skotrar i skogen. En kille sitter på ena skotern och kollar på telefonen han håller i handen.">
+        </picture>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>DT211G | anju2402, Ängla Juliusson | VT 2025</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

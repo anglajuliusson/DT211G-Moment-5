@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS</title>
+    <link rel="stylesheet" href="css/main.scss">
+</head>
+<body>
+    <header class="header">
+        <h1 class="mainheader">SASS</h1>
+        <div class="navmenu">
+            <nav class="menu" id="menu">
+                <ul class="headmenu">
+                    <li><a href="index.html">HEM</a></li>
+                    <li><a class="duarhar" href="sass.html">SASS</a></li>
+                    <li><a href="animering.html">ANIMERING</a></li>
+                    <li><a href="#">#</a></li>
+                    <li><a href="#">#</a></li>
+                </ul>
+            </nav>
+            </div>
+            <button class="menu-btn open" id="open-menu"> 
+                <span class="menu-icon"> 
+                <span class="bars"></span> 
+                <span class="bars"></span> 
+                <span class="bars"></span> 
+                </span> 
+                <span class="menutext">Meny</span> 
+                </button> 
+                <nav class="menu" id="nav-menu"> 
+                <button class="menu-btn close" id="close-menu"> 
+                <span class="menu-icon"> 
+                <span class="bars cross1"></span> 
+                <span class="bars cross2"></span> 
+                </span> 
+                <span class="menutext">Stäng meny</span> 
+                </button> 
+                <ul class="mobilmenu">
+                    <li><a href="index.html">HEM</a></li>
+                    <li><a class="duarhar" href="sass.html">SASS</a></li>
+                    <li><a href="animering.html">ANIMERING</a></li>
+                    <li><a href="#">#</a></li>
+                    <li><a href="#">#</a></li>
+                </ul>
+                </nav>
+    </header>
+    <main class="main">
+        <div class="infotext_sass">
+        <h2>Moment 3</h2>
+        <h3>Utvärdering av arbetet</h3>
+        <p>Denna uppgift har varit väldigt kul att göra eftersom det har varit något helt nytt. 
+            Jag tyckte att det var lite svårt att komma igång då jag inte riktigt visste var jag skulle börja,
+            men när man väl förstod så tycker jag att det gått realtivt bra. De inspelade föreläsningarna, slidesen till dem och 
+            läshänvisningarna har varit till stor hjälp denna gång och jag tycker att de varit väldigt lätta att förstå så 
+            det är väldigt skönt.
+        </p>
+        <p>SASS erbjuder många fördelar, speciellt för större projekt där återanvändning är viktigt. En annan fördel
+            är användningen av variabler som gör det enkelt att använda och hantera färger, typsnitt och andra stilinställningar.
+            Nesting förbättrar läsbarheten, men om man nästlar för mycket kan detta leda till att den blir svår att underhålla. 
+            Mixins och @extend hjälper till att undvika upprepning vilket gör att man slipper massa 
+            onödig kod och det är en stor fördel. Allt detta gör att koden blir mer organiserad men nackdelarna
+            blir då att felsökning kan bli knepigare då SASS kompileras till vanlig CSS och en annan nackdel är att man
+            behöver verktyg som Node.js för att kunna kompilera.
+        </p>
+        <p>Sammanfattningsvis är SASS ett bra val för större projekt där struktur och återanvändning är viktigt. 
+            För mindre projekt kan det dock vara enklare att använda vanlig CSS.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>DT211G | anju2402, Ängla Juliusson | VT 2025</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

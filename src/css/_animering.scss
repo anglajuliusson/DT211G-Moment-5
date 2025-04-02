@@ -1,0 +1,52 @@
+// Gör texten i navmenyn större när man för muspekaren över
+$font-size: 16px;
+$hover-size: 20px;
+$transition-speed: 0.3s;
+
+nav {
+  a {
+    font-size: $font-size;
+    transition: font-size $transition-speed ease-in-out;
+
+    &:hover {
+      font-size: $hover-size;
+    }
+  }
+}
+
+// Gör att .ozzyimg flyttas över sidan fram och tillbaka
+@keyframes movingimg {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(calc(100vw - 100%)); // Studdsar mellan skärmens kant
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.ozzyimg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: movingimg 10s linear infinite;
+}
+
+// Knapp som ändrar färg vid klick
+.animering_btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+      
+.animering_btn.active {
+  background-color: white;
+  color: black;
+}

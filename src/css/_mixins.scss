@@ -1,0 +1,98 @@
+@use "base";
+
+@mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+      border: black solid 2px;
+    } @else {
+      border: white solid 2px;
+    }
+  }
+
+//Ljusttema
+@mixin dark-text {
+    color: base.$dark-font-color;
+  }
+@media (prefers-color-scheme: light) {
+    body { // Bakgrundsfärg hela sidan
+        background-color: base.$primary-color;
+        @include dark-text; // Mörk text
+        h1 {
+            background-color: base.$light-footer-color;
+        }
+        nav {
+            background-color: base.$primary-color;
+
+            a { // Länkar navmenu
+                @include dark-text; // Mörk text
+            }
+            &:hover {
+                background-color: base.$light-footer-color;
+            }
+        }
+        .menu {
+            background-color: base.$light-footer-color;
+        }
+        .menu-btn { // Menubutton
+            background-color: base.$primary-color;
+            @include dark-text;
+            @include theme-colors(true);
+        }
+        .bars {
+            background-color: black;
+        }
+        .menutext {
+            @include dark-text;
+        }
+        .main { // Bakgrundsfärg innehåll
+            background-color: base.$lighten-color;
+            @include dark-text; // Mörk text
+        }
+        .footer {
+            background-color: base.$light-footer-color;
+        }
+    }
+}
+// Mörkttema
+@mixin light-text {
+    color: base.$light-font-color;
+  }
+@media (prefers-color-scheme: dark) {
+    body { // Bakgrundsfärg hela sidan
+        background-color: base.$darken-color;
+        @include light-text; // Ljustext
+        h1 {
+            background-color: base.$secondary-color;
+        }
+    nav {
+        background-color: base.$darken-color;
+
+        a { // länkar navmenu
+            @include light-text; // Ljustext på meny
+        }
+        &:hover {
+            background-color: base.$dark-footer-color;
+        }
+        }
+        #menu {
+            background-color: base.$dark-footer-color;
+        }
+        .menu-btn { // Menubutton
+            background-color: base.$darken-color;
+            @include light-text;
+            @include theme-colors(false);
+        }
+        .bars {
+            background-color: white;
+        }
+        .menutext {
+            @include light-text;
+        }
+        .main { // Bakgrundsfärg innehåll
+            background-color: base.$secondary-color;
+            @include light-text; // Ljustext
+        }
+        .footer {
+            background-color: base.$dark-footer-color;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animering</title>
+    <link rel="stylesheet" href="css/main.scss">
+</head>
+<body>
+    <header class="header">
+        <h1 class="mainheader">Animering</h1>
+        <div class="navmenu">
+            <nav class="menu" id="menu">
+                <ul class="headmenu">
+                    <li><a href="index.html">HEM</a></li>
+                    <li><a href="sass.html">SASS</a></li>
+                    <li><a class="duarhar" href="animering.html">ANIMERING</a></li>
+                    <li><a href="#">#</a></li>
+                    <li><a href="#">#</a></li>
+                </ul>
+            </nav>
+            </div>
+            <button class="menu-btn open" id="open-menu"> 
+                <span class="menu-icon"> 
+                <span class="bars"></span> 
+                <span class="bars"></span> 
+                <span class="bars"></span> 
+                </span> 
+                <span class="menutext">Meny</span> 
+                </button> 
+                <nav class="menu" id="nav-menu"> 
+                <button class="menu-btn close" id="close-menu"> 
+                <span class="menu-icon"> 
+                <span class="bars cross1"></span> 
+                <span class="bars cross2"></span> 
+                </span> 
+                <span class="menutext">Stäng meny</span> 
+                </button> 
+                <ul class="mobilmenu">
+                    <li><a href="index.html">HEM</a></li>
+                    <li><a href="sass.html">SASS</a></li>
+                    <li><a class="duarhar" href="animering.html">ANIMERING</a></li>
+                    <li><a href="#">#</a></li>
+                    <li><a href="#">#</a></li>
+                </ul>
+                </nav>
+    </header>
+    <main class="main">
+        <div class="animering_img">
+        <picture>
+            <source srcset="images/ozzy_pose.avif" type="image/avif">
+            <source srcset="images/ozzy_pose.webp" type="image/webp">
+            <img class="ozzyimg" src="images/ozzy_pose.jpeg" alt="Ozzy, en svart mops">
+        </picture>
+        </div>
+        <button class="animering_btn">
+            Klicka här
+        </button>
+    </main>
+    <footer class="footer">
+        <p>DT211G | anju2402, Ängla Juliusson | VT 2025</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
