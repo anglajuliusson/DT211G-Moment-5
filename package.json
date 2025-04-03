@@ -16,5 +16,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
     "node": ">= 12"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.8"
   }
 }
