@@ -85,12 +85,79 @@ function createBarChart(courses) {
     });
 }
 
+/**
+ * Filtrerar ut program, sorterar efter antal sökande och returnerar de 5 mest populära.
+ * @param {Object[]} data - Data hämtad från API:et.
+ * @returns {Object[]} En array med de 5 mest sökta kurserna.
+ */
+function getTopPrograms(data) {
+    const courses = data
+        .filter(item => 
+            item.type === 'Program') // Filtrera ut endast program
+        .map(course => ({
+            name: course.name,
+            applicantsTotal: course.applicantsTotal
+        }))
+        .sort((a, b) => b.applicantsTotal - a.applicantsTotal) // Sortera fallande
+        .slice(0, 5); // Ta de 5 mest sökta
+
+    console.log("De 5 mest sökta kurserna:", courses); // Logga för felsökning
+    return courses;
+}
+
+/**
+ * Skapar ett cirkeldiagram med de mest sökta programmen.
+ * @param {Object[]} programs - En array med programnamn och antal sökande.
+ */
+function createPieChart(programs) {
+    const ctx = document.querySelector('.programChart').getContext('2d');
+
+    const labels = programs.map(program => program.name);
+    const data = programs.map(program => program.applicantsTotal);
+
+    new Chart(ctx, {
+        type: 'pie', // Cirkeldiagram
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Antal sökande',
+                data: data,
+                backgroundColor: [
+                    'white',
+                    'lightgrey',
+                    'grey',
+                    'darkgrey',
+                    'black'
+                ],
+                borderColor: [
+                        'white',
+                        'lightgrey',
+                        'grey',
+                        'darkgrey',
+                        'black'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true
+                }
+            }
+        }
+    });
+}
+
 // Huvudfunktion som körs när sidan laddas
 async function main() {
     try {
         const data = await fetchData(); // Hämta data från API
         const topCourses = getTopCourses(data); // Filtrera de mest sökta kurserna
+        const topPrograms = getTopPrograms(data); // Filtrera de mest sökta programmen
         createBarChart(topCourses); // Skapa diagrammet
+        createPieChart(topPrograms); // Skapa cirkeldiagram
     } catch (error) {
         console.error("Ett fel uppstod:", error);
     }
