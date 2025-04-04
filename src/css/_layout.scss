@@ -434,7 +434,124 @@ body {
             width: 100%;
             overflow: hidden;
             display: flex;
+            position: relative;
             bottom: 0;
+            left: 0 !important;
         }
+    }
+}
+// Avvikande main-storlek för diagram-sidan
+@media (min-width: 1025px) {
+    #diagram_main {
+        max-width: 700px;
+        width: 100% !important;
+        justify-content: center;
+        text-align: center;
+    }
+    .courseDiagram {
+        display: grid;
+        grid-template-areas: 
+        "coursediagram";
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .courseChart {
+        grid-area: coursediagram;
+        max-width: 500px !important;
+        width: 100% !important;
+    }
+    .programheader {
+        margin-top: 3em;
+    }
+    .programDiagram {
+        display: grid;
+        grid-template-areas: 
+        "programdiagram";
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .programChart {
+        grid-area: programdiagram;
+        max-width: 500px !important;
+        width: 100% !important;
+    }
+}
+@media (max-width: 1024px) {
+    #diagram_main {
+        max-width: 700px;
+        width: 100% !important;
+        padding: 2em;
+    }
+    .courseDiagram {
+        display: grid;
+        grid-template-areas: 
+        "coursediagram";
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .courseChart {
+        grid-area: coursediagram;
+        max-width: 500px !important;
+        width: 100% !important;
+    }
+    .programheader {
+        margin-top: 3em;
+    }
+    .programDiagram {
+        display: grid;
+        grid-template-areas: 
+        "programdiagram";
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .programChart {
+        grid-area: programdiagram;
+        max-width: 500px !important;
+        width: 100% !important;
+    }
+}
+@media (max-width: 600px) {
+    #diagram_main {
+        max-width: 450px;
+        width: 100% !important;
+    }
+    .courseDiagram {
+        display: grid;
+        grid-template-areas: 
+        "coursediagram";
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .courseChart {
+        grid-area: coursediagram;
+        max-width: 400px !important;
+        width: 100% !important;
+    }
+    .programheader {
+        margin-top: 3em;
+    }
+    .programDiagram {
+        display: grid;
+        grid-template-areas: 
+        "programdiagram";
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .programChart {
+        grid-area: programdiagram;
+        max-width: 400px !important;
+        width: 100% !important;
     }
 }
