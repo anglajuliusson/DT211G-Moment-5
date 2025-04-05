@@ -17,8 +17,6 @@ function getUserLocation() {
                 // Logga latitud och longitud
                 console.log("Latitude: " + latitude);
                 console.log("Longitude: " + longitude);
-
-                // Här kan du använda koordinaterna för att exempelvis uppdatera en karta
             },
             function(error) {
                 // Om det uppstår ett fel vid inhämtning av positionen
