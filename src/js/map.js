@@ -26,7 +26,7 @@ function getUserLocation() {
             },
             {
                 enableHighAccuracy: true, // Försök att få en mer exakt position
-                timeout: 10000, // Maximal tid för att hämta positionen (5 sekunder)
+                timeout: 5000, // Maximal tid för att hämta positionen (5 sekunder)
                 maximumAge: 0 // Ingen cachelagring
             }
         );
