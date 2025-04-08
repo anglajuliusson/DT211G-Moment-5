@@ -555,3 +555,9 @@ body {
         width: 100% !important;
     }
 }
+// Säkerhetsställer att kartan syns
+.mapFrame {
+    display: block;
+    width: 100%;
+    height: 500px; 
+}
