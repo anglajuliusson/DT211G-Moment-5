@@ -83,3 +83,44 @@ async function initMap() {
 }
 // Anropa funktionen för att hämta och logga användarens nuvarande position
 initMap();
+
+/**
+ * Söker en plats via Nominatim och uppdaterar kartan.
+ * 
+ * @async
+ * @function searchLocation
+ * @param {string} query - Plats eller adress som ska sökas
+ */
+async function searchLocation(query) {
+    try {
+        const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&addressdetails=1`;
+        const response = await fetch(url);
+        const results = await response.json();
+
+        if (results.length > 0) {
+            // // Försök hitta stad, ort eller by först
+            const place = results.find(r => ["city", "town", "village"].includes(r.type)) || results[0];
+
+            // Hämta lat & lon 
+            const lat = place.lat;
+            const lon = place.lon;
+
+            const position = { lat: parseFloat(lat), lng: parseFloat(lon) };
+
+            map.setCenter(position);
+            map.setZoom(14);
+        } else {
+            alert("Ingen plats hittades.");
+        }
+    } catch (error) {
+        console.error("Fel vid platsökning:", error);
+        alert("Ett fel uppstod vid sökningen.");
+    }
+}
+
+document.querySelector(".search_button").addEventListener("click", () => {
+    const query = document.querySelector(".locationInput").value.trim();
+    if (query) {
+        searchLocation(query);
+    }
+});
