@@ -435,7 +435,6 @@ body {
             overflow: hidden;
             display: flex;
             position: relative;
-            bottom: 0;
             left: 0 !important;
         }
     }
@@ -555,9 +554,80 @@ body {
         width: 100% !important;
     }
 }
-// Säkerhetsställer att kartan syns
-.mapFrame {
-    display: block;
-    width: 500px;
-    height: 500px; 
-}
+// Avvikande main-storlek på karta-sidan
+@media (min-width: 1025px) {
+    #map_main {
+      max-width: 1000px;
+      width: 100% !important;
+      padding: 50px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  
+      .mapFrame {
+        display: block;
+        max-width: 1000px;
+        width: 100% !important;
+        height: 500px;
+        margin: auto;
+      }
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    #map_main {
+      max-width: 800px;
+      width: 100% !important;
+      padding: 30px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  
+      .mapFrame {
+        display: block;
+        width: 800px !important;
+        height: 500px !important;
+        margin: auto;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    #map_main {
+      max-width: 600px;
+      width: 100% !important;
+      padding: 30px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  
+      .mapFrame {
+        display: block;
+        width: 600px !important;
+        height: 500px !important;
+        margin: auto;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    #map_main {
+      max-width: 400px;
+      width: 100% !important;
+      padding: 30px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2em;
+  
+      .mapFrame {
+        display: block;
+        width: 400px !important;
+        height: 300px !important;
+        margin: auto;
+      }
+    }
+    #map_footer {
+        width: 100vw;
+        margin-top: 10em;
+        font-size: medium;
+    }
+  }
