@@ -571,6 +571,16 @@ body {
         height: 500px;
         margin: auto;
       }
+      .search {
+        margin: 1em;
+      }
+      .locationInput {
+        height: 20px;
+      }
+      .search_button {
+        height: 25px;
+        background-color: darkgray;
+      }
     }
   }
   
@@ -589,6 +599,16 @@ body {
         height: 500px !important;
         margin: auto;
       }
+      .search {
+        margin: 1em;
+      }
+      .locationInput {
+        height: 20px;
+      }
+      .search_button {
+        height: 25px;
+        background-color: darkgray;
+      }
     }
   }
   @media (max-width: 800px) {
@@ -605,6 +625,16 @@ body {
         width: 600px !important;
         height: 500px !important;
         margin: auto;
+      }
+      .search {
+        margin: 1em;
+      }
+      .locationInput {
+        height: 20px;
+      }
+      .search_button {
+        height: 25px;
+        background-color: darkgray;
       }
     }
   }
@@ -623,6 +653,16 @@ body {
         width: 400px !important;
         height: 300px !important;
         margin: auto;
+      }
+      .search {
+        margin: 1em;
+      }
+      .locationInput {
+        height: 20px;
+      }
+      .search_button {
+        height: 25px;
+        background-color: darkgray;
       }
     }
     #map_footer {
