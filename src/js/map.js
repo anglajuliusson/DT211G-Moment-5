@@ -82,7 +82,7 @@ async function initMap() {
     }
 }
 // Anropa funktionen för att hämta och logga användarens nuvarande position
-initMap();
+window.initMap = initMap;
 
 /**
  * Söker en plats via Nominatim och uppdaterar kartan.
@@ -118,9 +118,18 @@ async function searchLocation(query) {
     }
 }
 
-document.querySelector(".search_button").addEventListener("click", () => {
-    const query = document.querySelector(".locationInput").value.trim();
-    if (query) {
-        searchLocation(query);
+document.addEventListener("DOMContentLoaded", function () {
+    const searchButton = document.querySelector(".search_button");
+    const locationInput = document.querySelector(".locationInput");
+
+    if (searchButton && locationInput) {
+        searchButton.addEventListener("click", () => {
+            const query = locationInput.value.trim();
+            if (query) {
+                searchLocation(query);
+            }
+        });
+    } else {
+        console.warn("Sökfält eller sökknapp hittades inte i DOM:en.");
     }
 });
